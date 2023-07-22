@@ -97,6 +97,19 @@ trac.emit('get',
 });
 
 /**
+* Get multiple handles in one call.
+* Accepts an array with handle strings to lookup.
+* Returns an array with objects, each containing inscription id, inscription number and original handle as entered by the inscriber.
+*/
+
+trac.emit('get',
+{
+    func : 'handles',
+    args : [[handle1, handle2, handle3, ...]],
+    call_id : ''
+});
+
+/**
 * Returns the size of valid tracker handles.
 * Can be used with "handleByIndex" to iterater over the entire index.
 */
